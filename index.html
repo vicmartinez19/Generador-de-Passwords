@@ -5,7 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de passwords</title>
 </head>
+</head>
+
 <body>
-    <h1>Generador de passwords</h1>
+
+<div class="container">
+    <h2>Generador de passwords</h2>
+
+    <div class="password-box">
+        <input type="text" id="password" readonly>
+        <button onclick="copyPassword()">Copiar📄</button>
+    </div>
+
+    <div class="range-box">
+        <span>Longitud</span>
+        <span id="lengthValue">12</span>
+    </div>
+    <input type="range" id="length" min="9" max="32" value="12">
+
+    <div class="options">
+        <label><input type="checkbox" id="uppercase" checked> Incluir Mayúsculas</label>
+        <label><input type="checkbox" id="lowercase" checked> Incluir Minúsculas</label>
+        <label><input type="checkbox" id="numbers" checked> Incluir Números</label>
+        <label><input type="checkbox" id="symbols"> Incluir Símbolos</label>
+    </div>
+
+    <div class="strength">
+        <div class="strength-bar" id="strengthBar"></div>
+    </div>
+
+    <button class="generate" onclick="generatePassword()">GENERAR</button>
+
+</div>
+
 </body>
 </html>
